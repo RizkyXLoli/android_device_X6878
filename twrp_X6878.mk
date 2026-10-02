@@ -7,8 +7,14 @@
 # Inherit from Infinix-X6878 device
 $(call inherit-product, device/infinix/X6878/device.mk)
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+
+
 # Inherit some common TWRP stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
+
+PRODUCT_PACKAGES += \
+    recovery
 
 # Product Specifics
 PRODUCT_NAME := twrp_X6878
